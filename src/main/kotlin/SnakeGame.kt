@@ -71,6 +71,10 @@ class Board() : JPanel(), ActionListener {
     private fun initGame() {
 
         nOfDots = 3
+        if (currentAiNumber != 0)
+            delay = 0
+        else
+            delay = 50
         ai = currentGeneration[currentAiNumber]
         for (z in 0 until nOfDots) {
             x[z] = 4 * dotSize - z * dotSize
@@ -119,10 +123,6 @@ class Board() : JPanel(), ActionListener {
         var lock = true
         if (currentAiNumber < population - 1)
         {
-            if (currentAiNumber > 5)
-                delay = 0
-            else
-                delay = 50
             currentAiNumber += 1
         }
         else {
