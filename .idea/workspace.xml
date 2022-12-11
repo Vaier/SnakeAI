@@ -38,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -59,8 +60,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hatsune Miku\Desktop\Snake AI\src\main\java" />
     </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="Genetic algorithm" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Snake">
+  <component name="RunManager" selected="Application.AppKt">
     <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="Snake_game.main" />
       <option name="VM_PARAMETERS" />
@@ -100,10 +107,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="text" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="Snake_game.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="text" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Snake" />
         <item itemvalue="Application.AppKt" />
+        <item itemvalue="Application.Snake" />
+        <item itemvalue="Application.text" />
         <item itemvalue="Application.TestKt" />
       </list>
     </recent_temporary>
