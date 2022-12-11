@@ -360,7 +360,7 @@ class Board() : JPanel(), ActionListener
 
     private fun createNewGeneration()
     {
-        currentGeneration = elitismSelection(population, 0.04, 0.8)
+        currentGeneration = elitismSelection(currentGeneration, 0.04, 0.8)
     }
 
 }
