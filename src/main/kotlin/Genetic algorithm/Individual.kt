@@ -2,7 +2,7 @@ import kotlin.random.Random
 
 class Individual()
 {
-    var outputLayerConnections: Array<Array<Double>> = Array(4) { Array(24) { 0.0 } }
+    var outputLayerConnections: Array<DoubleArray> = Array(4) { DoubleArray(24)}
     var fitness = 0.0
     val numberOfHiddenLayers = 0
 
@@ -24,7 +24,7 @@ class Individual()
         }
     }
 
-    constructor(outputLayer: Array<Array<Double>>) : this()
+    constructor(outputLayer: Array<DoubleArray>) : this()
     {
 
         //Constructing output connections
@@ -47,7 +47,7 @@ class Individual()
         return java.lang.Double.max(0.0, num)
     }
 
-    fun getMove(input: Array<Double>): Int
+    fun getMove(input: DoubleArray): Int
     {
         var max = -1000.0
         var move = -1

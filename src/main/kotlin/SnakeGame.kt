@@ -241,7 +241,7 @@ class Board() : JPanel(), ActionListener
             var directionArray = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
             directionArray[direction-1] = 1.0
             directionArray[tailDirection() + 4 - 1] = 1.0
-            var input: Array<Double> = arrayOf(*(checkDistanceToWalls()), *(checkForApple()), *(checkForSnakeParts()))
+            var input: DoubleArray = doubleArrayOf(*(checkDistanceToWalls()), *(checkForApple()), *(checkForSnakeParts()))
             var newDirection = ai.getMove(input)
 
             if(!isDirectionOpposite(direction, newDirection))
@@ -268,8 +268,8 @@ class Board() : JPanel(), ActionListener
         return 4
     }
 
-    private fun checkForApple(): Array<Double> {
-        var sensors = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+    private fun checkForApple(): DoubleArray {
+        var sensors = DoubleArray(8)
         if (x[0] == appleX && y[0] > appleY){
             sensors[0] = 1.0
         }
@@ -305,8 +305,8 @@ class Board() : JPanel(), ActionListener
         return sensors
     }
 
-    private fun checkForSnakeParts(): Array<Double> {
-        var sensors = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+    private fun checkForSnakeParts(): DoubleArray {
+        var sensors = DoubleArray(8)
         for (i in 1 until nOfDots) {
             if (x[0] == x[i] && y[0] > y[i]) {
                 sensors[0] = 1.0
@@ -343,12 +343,12 @@ class Board() : JPanel(), ActionListener
         return sensors
     }
 
-    private fun checkDistanceToWalls(): Array<Double>
+    private fun checkDistanceToWalls(): DoubleArray
     {
         var currentCords = currentHeadCell()
         var x = currentCords.first.toDouble()
         var y = currentCords.second.toDouble()
-        return arrayOf(y, sqrt((min(y, 10 - x) * min(y, 10 - x) * 2)),
+        return doubleArrayOf(y, sqrt((min(y, 10 - x) * min(y, 10 - x) * 2)),
             10 - x, sqrt((min(10 - y, 10 - x) * min(10 - y, 10 - x) * 2)),
             10 - y, sqrt((min(10 - y, x) * min(10 - y, x) * 2)),
             x, sqrt((min(y, x) * min(y, x) * 2)))
